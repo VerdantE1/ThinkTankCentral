@@ -6,7 +6,7 @@ CREATE TABLE `article`  (
   `article_raise` int NULL COMMENT '文章点赞',
   `article_collection` int NULL COMMENT '文章收藏',
   `article_lookthrough` int NULL COMMENT '文章浏览次数',
-  `author_id` int NULL DEFAULT 无类型 COMMENT '【作者外键】',
+  `author_id` int NULL COMMENT '【作者外键】',
   `article_status` tinyint NULL COMMENT '文章状态；0是草稿，1表示已发布，2表示已删除',
   `creat_time` datetime NULL COMMENT '创建时间',
   `update_time` datetime NULL COMMENT '最后更新时间',
@@ -29,7 +29,6 @@ CREATE TABLE `article_comment`  (
   `comment_context` text NULL COMMENT '评论内容',
   `comment_time` datetime NULL COMMENT '评论时间',
   `is_deleted` tinyint NULL COMMENT '是否删除（0正常；1删除）',
-    NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -60,15 +59,13 @@ CREATE TABLE `sys_user`  (
   `sys_user_name` varchar(255) NULL COMMENT '用户名',
   `sys_user_passwd` varchar(255) NULL COMMENT '用户密码',
   `sys_user_register_time` datetime NULL COMMENT '注册时间',
-  `sys_user_lastlogin` datatime NULL COMMENT '最后登录时间',
+  `sys_user_lastlogin` datetime NULL COMMENT '最后登录时间',
   `sys_user_avatar` varchar(255) NULL COMMENT '用户头像URL',
   `user_role` tinyint NULL COMMENT '用户角色权限',
   `creat_time` datetime NULL COMMENT '创建时间',
   `update_time` datetime NULL COMMENT '最后更新时间',
   PRIMARY KEY (`sys_user_id`)
 );
-
-ALTER TABLE `article_comment` MODIFY COLUMN ``  NULL AFTER `is_deleted`;
 
 CREATE VIEW `view_1` AS;
 
