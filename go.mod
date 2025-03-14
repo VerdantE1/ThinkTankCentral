@@ -2,7 +2,10 @@ module ThinkTankCentral
 
 go 1.24rc3
 
-require github.com/gin-gonic/gin v1.10.0
+require (
+	github.com/gin-gonic/gin v1.10.0
+	gorm.io/gorm v1.25.12
+)
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect

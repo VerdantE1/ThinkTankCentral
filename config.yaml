@@ -1,0 +1,18 @@
+captcha:
+  height: 80
+  width: 240
+  length: 6
+  max_skew: 0.7
+  dot_count: 80
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db_name: horizon_end
+  username: root
+  password: root
+  max_idle_conns: 10
+  max_open_conns: 100
+  log_mode: info
+
