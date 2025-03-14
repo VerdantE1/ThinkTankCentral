@@ -1,25 +1,16 @@
 package main
 
 import (
-	"ThinkTankCentral/config"
-	"ThinkTankCentral/routes"
+	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func main() {
-
-	// 加载环境变量
-	config.LoadEnv()
-
-	// 初始化数据库
-	config.InitDatabase()
-
-	// 设置路由
-	r := routes.SetupRouter()
-
-	// 获取端口号
-	port := config.GetEnv("APP_PORT")
-
-	// 运行服务
-	r.Run(":" + port)
+	r := gin.Default()
+	r.LoadHTMLGlob("static/*")
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", gin.H{})
+	})
+	r.Run()
 
 }
