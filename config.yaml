@@ -31,5 +31,13 @@ system:
   env: release
   router_prefix: api
   use_multipoint: true
-  sessions_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  sessions_secret: sessions_secret_123
   oss_type: local
+
+
+jwt:
+  access_token_secret: access_secret_123
+  refresh_token_secret: refresh_secret_456
+  access_token_expiry_time: 2h
+  refresh_token_expiry_time: 7d
+  issuer: next_horizon
