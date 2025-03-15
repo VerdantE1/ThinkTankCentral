@@ -14,9 +14,11 @@ package global
 import (
 	"ThinkTankCentral/config"
 	"go.uber.org/zap"
+	"gorm.io/gorm"
 )
 
 var (
 	Config *config.Config
 	Log    *zap.Logger
+	DB     *gorm.DB
 )
