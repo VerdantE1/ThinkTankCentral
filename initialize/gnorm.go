@@ -8,7 +8,7 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-func initGorm() *gorm.DB {
+func InitGorm() *gorm.DB {
 	mysqlCfg := global.Config.Mysql
 
 	db, err := gorm.Open(mysql.Open(mysqlCfg.Dsn()), &gorm.Config{

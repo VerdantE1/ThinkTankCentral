@@ -9,7 +9,7 @@ mysql:
   host: 127.0.0.1
   port: 3306
   config: charset=utf8mb4&parseTime=True&loc=Local
-  db_name: horizon_end
+  db_name: next_horizon_db
   username: root
   password: root
   max_idle_conns: 10
