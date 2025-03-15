@@ -8,4 +8,5 @@ type Config struct {
 	ES      ES      `json:"es" yaml:"es"`
 	Email   Email   `json:"email" yaml:"email"`
 	Redis   Redis   `json:"redis" yaml:"redis"`
+	Jwt     Jwt     `json:"jwt" yaml:"jwt"`
 }
