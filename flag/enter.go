@@ -2,6 +2,7 @@ package flag
 
 import (
 	"ThinkTankCentral/global"
+	"errors"
 	"github.com/urfave/cli"
 	"go.uber.org/zap"
 	"os"
@@ -12,9 +13,22 @@ var (
 		Name:  "sql",
 		Usage: "Initializes the structure of the MySQL database",
 	}
+	sqlExportFlag = &cli.BoolFlag{
+		Name:  "sql-export",
+		Usage: "Exports SQL data to a specified file.",
+	}
+	sqlImportFlag = &cli.StringFlag{
+		Name:  "sql-import",
+		Usage: "Imports SQL data from a specified file.",
+	}
 )
 
 func Run(c *cli.Context) {
+	if c.NumFlags() > 1 {
+		err := cli.NewExitError("Only one command can be specified", 1)
+		global.Log.Error("Invalid command usage", zap.Error(err))
+		os.Exit(1)
+	}
 	switch {
 	case c.Bool(sqlFlag.Name):
 		if err := SQL(); err != nil {
@@ -22,7 +36,26 @@ func Run(c *cli.Context) {
 		} else {
 			global.Log.Info("Successfully created table structure")
 		}
-
+	case c.Bool(sqlExportFlag.Name):
+		if err := SQLExport(); err != nil {
+			global.Log.Error("Failed to export SQL data:", zap.Error(err))
+		} else {
+			global.Log.Info("Successfully exported SQL data")
+		}
+	case c.IsSet(sqlImportFlag.Name):
+		if errs := SQLImport(c.String(sqlImportFlag.Name)); len(errs) > 0 {
+			var combinedErrors string
+			for _, err := range errs {
+				combinedErrors += err.Error() + "\n"
+			}
+			err := errors.New(combinedErrors)
+			global.Log.Error("Failed to import SQL data:", zap.Error(err))
+		} else {
+			global.Log.Info("Successfully imported SQL data")
+		}
+	default:
+		err := cli.NewExitError("Unknown command", 1)
+		global.Log.Error("Unknown command", zap.Error(err))
 	}
 }
 
@@ -31,17 +64,21 @@ func NewApp() *cli.App {
 	app.Name = "BlogDevTool"
 	app.Flags = []cli.Flag{
 		sqlFlag,
+		sqlExportFlag,
+		sqlImportFlag,
 	}
 	app.Action = Run
 	return app
 }
 
 func InitFlag() {
-	app := NewApp()
-	err := app.Run(os.Args)
-	if err != nil {
-		global.Log.Error("Application execution encountered an error", zap.Error(err))
-		os.Exit(1)
+	if len(os.Args) > 1 {
+		app := NewApp()
+		err := app.Run(os.Args)
+		if err != nil {
+			global.Log.Error("Application execution encountered an error", zap.Error(err))
+			os.Exit(1)
+		}
+		os.Exit(0)
 	}
-	os.Exit(0)
 }

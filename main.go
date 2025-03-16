@@ -16,7 +16,8 @@ func main() {
 	global.ESClient = initialize.ConnectEs()
 
 	defer global.Redis.Close()
+	flag.InitFlag() //初始化Flag
+
 	initialize.InitCron()
-	flag.InitFlag()  //初始化Flag
 	core.RunServer() //启动服务器
 }
