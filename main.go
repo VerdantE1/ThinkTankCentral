@@ -2,6 +2,7 @@ package main
 
 import (
 	"ThinkTankCentral/core"
+	"ThinkTankCentral/flag"
 	"ThinkTankCentral/global"
 	"ThinkTankCentral/initialize"
 )
@@ -16,5 +17,6 @@ func main() {
 
 	defer global.Redis.Close()
 	initialize.InitCron()
+	flag.InitFlag()  //初始化Flag
 	core.RunServer() //启动服务器
 }
