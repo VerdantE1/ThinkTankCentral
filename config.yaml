@@ -41,3 +41,15 @@ jwt:
   access_token_expiry_time: 2h
   refresh_token_expiry_time: 7d
   issuer: next_horizon
+
+redis:
+  address: 127.0.0.1:6379
+  password: ""
+  db: 0
+
+
+es:
+  url: http://127.0.0.1:9200
+  username: ""
+  password: ""
+  is_console_print: true
