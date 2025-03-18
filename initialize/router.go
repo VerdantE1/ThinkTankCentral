@@ -2,20 +2,23 @@ package initialize
 
 import (
 	"ThinkTankCentral/global"
+	"ThinkTankCentral/router"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 func InitRouter() *gin.Engine {
 	gin.SetMode(global.Config.System.Env)
 	Router := gin.Default()
 
-	/* 默认路由逻辑 */
-	Router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{})
-	})
+	//路由组启动器 （无结构，用于Specify路由器）
+	routerGroup := router.RouterGroupApp
 
-	Router.LoadHTMLGlob("static/*")
+	//一个路由组实例，api路由组
+	publicGroup := Router.Group(global.Config.System.RouterPrefix)
+	{
+		routerGroup.InitBaseRouter(publicGroup) //将publicGroup初始化为baseGroup
+
+	}
 
 	return Router
 }
