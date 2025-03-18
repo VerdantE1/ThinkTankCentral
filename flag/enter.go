@@ -3,6 +3,7 @@ package flag
 import (
 	"ThinkTankCentral/global"
 	"errors"
+	"fmt"
 	"github.com/urfave/cli"
 	"go.uber.org/zap"
 	"os"
@@ -71,18 +72,18 @@ func Run(c *cli.Context) {
 		} else {
 			global.Log.Info("Successfully created ES indices")
 		}
-	//case c.Bool(esExportFlag.Name):
-	//	if err := ElasticsearchExport(); err != nil {
-	//		global.Log.Error("Failed to export ES data:", zap.Error(err))
-	//	} else {
-	//		global.Log.Info("Successfully exported ES data")
-	//	}
-	//case c.IsSet(esImportFlag.Name):
-	//	if num, err := ElasticsearchImport(c.String(esImportFlag.Name)); err != nil {
-	//		global.Log.Error("Failed to import ES data:", zap.Error(err))
-	//	} else {
-	//		global.Log.Info(fmt.Sprintf("Successfully imported ES data, totaling %d records", num))
-	//	}
+	case c.Bool(esExportFlag.Name):
+		if err := ElasticsearchExport(); err != nil {
+			global.Log.Error("Failed to export ES data:", zap.Error(err))
+		} else {
+			global.Log.Info("Successfully exported ES data")
+		}
+	case c.IsSet(esImportFlag.Name):
+		if num, err := ElasticsearchImport(c.String(esImportFlag.Name)); err != nil {
+			global.Log.Error("Failed to import ES data:", zap.Error(err))
+		} else {
+			global.Log.Info(fmt.Sprintf("Successfully imported ES data, totaling %d records", num))
+		}
 	default:
 		err := cli.NewExitError("Unknown command", 1)
 		global.Log.Error("Unknown command", zap.Error(err))
@@ -97,8 +98,8 @@ func NewApp() *cli.App {
 		sqlExportFlag,
 		sqlImportFlag,
 		esFlag,
-		//esExportFlag,
-		//esImportFlag,
+		esExportFlag,
+		esImportFlag,
 	}
 	app.Action = Run
 	return app

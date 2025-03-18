@@ -1,0 +1,14 @@
+{
+  "created_at": "2025-03-17",
+  "updated_at": "2025-03-17",
+  "cover": "https://example.com/cover.jpg",
+  "title": "如何实现链式调用",
+  "keyword": "Go,链式调用go ru,编程",
+  "category": "编程",
+  "tags": ["Go", "开发", "技术"],
+  "abstract": "本文介绍了如何在 Go 语言中实现链式调用，包括实现步骤和实际应用。",
+  "content": "链式调用是一种编程技巧，通过在方法中返回自身的引用，允许多个方法调用连续执行。本文通过示例讲解了该方法的实现以及实际应用。",
+  "views": 1234,
+  "comments": 56,
+  "likes": 789
+}

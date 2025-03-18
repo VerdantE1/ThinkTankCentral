@@ -1,0 +1,65 @@
+#Docker compose configuration edit by frank buzzlight.frank@qq.com
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=next_horizon_db
+    restart: always
+    networks:
+      - blog_network
+
+
+
+  elasticsearch:
+    image: elasticsearch:8.17.0
+    container_name: es
+    ports:
+      - "9200:9200" # 将容器的 9200 端口映射到主机的 9200 端口
+    environment:
+      - discovery.type=single-node
+      - xpack.security.http.ssl.enabled=false
+      - xpack.license.self_generated.type=trial
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms84m -Xmx512m
+    networks:
+      - blog_network
+    depends_on:
+      - mysql
+      - redis
+
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    networks:
+      - blog_network
+    depends_on:
+      - mysql
+
+
+  kibana:
+    image: kibana:8.17.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - "ELASTICSEARCH_HOSTS=http://es:9200"
+    networks:
+      - blog_network
+    depends_on:
+      - elasticsearch
+
+
+
+networks:
+  blog_network:
+    driver: bridge
+
+
