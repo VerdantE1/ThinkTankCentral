@@ -11,6 +11,9 @@ services:
     restart: always
     networks:
       - blog_network
+    volumes:
+      # 将 MySQL 数据挂载到 Windows 主机路径
+      - C:/docker-volumes/mysql:/var/lib/mysql # 持久化 MySQL 数据库数据
 
 
 
@@ -30,7 +33,10 @@ services:
     depends_on:
       - mysql
       - redis
-
+    volumes:
+      # 将 Elasticsearch 数据和插件挂载到 Windows 主机路径
+      - C:/docker-volumes/es_data:/usr/share/elasticsearch/data # 持久化 Elasticsearch 索引数据
+      - C:/docker-volumes/es_plugins:/usr/share/elasticsearch/plugins # 持久化 Elasticsearch 插件
 
   redis:
     image: redis
@@ -42,6 +48,9 @@ services:
       - blog_network
     depends_on:
       - mysql
+    volumes:
+      # 将 Redis 数据挂载到 Windows 主机路径
+      - C:/docker-volumes/redis:/data # 持久化 Redis 缓存数据
 
 
   kibana:
@@ -62,4 +71,8 @@ networks:
   blog_network:
     driver: bridge
 
-
+volumes:
+  mysql_data: # 用于 MySQL 数据持久化
+  es_data:    # 用于 Elasticsearch 索引持久化
+  es_plugins: # 用于 Elasticsearch 插件持久化
+  redis_data: # 用于 Redis 缓存持久化
