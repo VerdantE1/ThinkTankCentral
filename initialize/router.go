@@ -28,10 +28,20 @@ func InitRouter() *gin.Engine {
 	//路由组启动器 （无结构，用于Specify路由器）
 	routerGroup := router.RouterGroupApp
 
-	//一个路由组实例，api路由组
+	//基础公共路由
 	publicGroup := Router.Group(global.Config.System.RouterPrefix)
+
+	//特定路由
+	privateGroup := Router.Group(global.Config.System.RouterPrefix)
+	privateGroup.Use(middleware.JWTAuth())
+
+	//管理员路由
+	adminGroup := Router.Group(global.Config.System.RouterPrefix)
+	adminGroup.Use(middleware.JWTAuth()).Use(middleware.AdminAuth())
 	{
 		routerGroup.InitBaseRouter(publicGroup) //将publicGroup初始化为baseGroup
+	}
+	{
 
 	}
 

@@ -2,8 +2,8 @@ package api
 
 import (
 	"ThinkTankCentral/global"
+	"ThinkTankCentral/model/request"
 	"ThinkTankCentral/model/response"
-	"ThinkTankCentral/request"
 	"github.com/gin-gonic/gin"
 	"github.com/mojocn/base64Captcha"
 	"go.uber.org/zap"

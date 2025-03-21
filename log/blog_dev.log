@@ -1,0 +1,101 @@
+{"level":"INFO","time":"2025-03-14T20:07:06.504+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:12:47.767+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:12:48.747+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:13:10.345+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:13:10.956+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:13:24.291+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:13:25.596+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:45:09.942+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-14T20:45:11.001+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"ERROR","time":"2025-03-15T20:29:43.489+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"ERROR","time":"2025-03-15T20:29:43.498+0800","caller":"initialize/redis.go:24","msg":"Failed to connect to Redis:","error":"dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"ERROR","time":"2025-03-15T20:29:45.434+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"ERROR","time":"2025-03-15T20:29:45.442+0800","caller":"initialize/redis.go:24","msg":"Failed to connect to Redis:","error":"dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"ERROR","time":"2025-03-15T20:31:33.188+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"Error 1049 (42000): Unknown database 'horizon_end'"}
+{"level":"INFO","time":"2025-03-15T20:31:33.197+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-15T20:31:33.198+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"ERROR","time":"2025-03-15T20:31:33.824+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"Error 1049 (42000): Unknown database 'horizon_end'"}
+{"level":"INFO","time":"2025-03-15T20:31:33.836+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-15T20:31:33.837+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"ERROR","time":"2025-03-15T20:32:01.456+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"Error 1049 (42000): Unknown database 'horizon_end'"}
+{"level":"INFO","time":"2025-03-15T20:32:01.465+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-15T20:32:01.466+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-15T20:33:40.953+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-15T20:33:40.953+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-16T21:40:36.053+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-16T21:40:36.709+0800","caller":"flag/enter.go:23","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-16T21:41:19.643+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-16T21:41:19.801+0800","caller":"flag/enter.go:23","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-16T21:41:24.745+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-16T21:41:24.871+0800","caller":"flag/enter.go:23","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-16T21:58:19.049+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-16T21:58:19.048+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-16T22:00:50.624+0800","caller":"flag/enter.go:49","msg":"Application execution encountered an error","error":"flag provided but not defined: -asd"}
+{"level":"ERROR","time":"2025-03-16T22:01:30.386+0800","caller":"flag/enter.go:49","msg":"Application execution encountered an error","error":"flag provided but not defined: -asd"}
+{"level":"ERROR","time":"2025-03-16T22:03:32.835+0800","caller":"flag/enter.go:51","msg":"Application execution encountered an error","error":"flag provided but not defined: -asd"}
+{"level":"INFO","time":"2025-03-16T22:04:02.438+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-16T22:04:02.438+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-16T22:06:31.143+0800","caller":"flag/enter.go:51","msg":"Application execution encountered an error","error":"flag provided but not defined: -asd"}
+{"level":"INFO","time":"2025-03-16T22:06:44.459+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-16T22:06:44.459+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-16T22:07:29.411+0800","caller":"flag/enter.go:28","msg":"Successfully created table structure"}
+{"level":"ERROR","time":"2025-03-16T22:08:50.574+0800","caller":"flag/enter.go:32","msg":"Unknown command","error":"Unknown command"}
+{"level":"ERROR","time":"2025-03-16T22:09:03.175+0800","caller":"flag/enter.go:51","msg":"Application execution encountered an error","error":"flag provided but not defined: -a"}
+{"level":"INFO","time":"2025-03-16T22:20:16.962+0800","caller":"flag/enter.go:43","msg":"Successfully exported SQL data"}
+{"level":"ERROR","time":"2025-03-16T22:24:57.255+0800","caller":"flag/enter.go:79","msg":"Application execution encountered an error","error":"flag provided but not defined: -sql-exported"}
+{"level":"ERROR","time":"2025-03-16T22:25:08.692+0800","caller":"flag/enter.go:41","msg":"Failed to export SQL data:","error":"open exported_sql\\mysql_20250316.sql: The system cannot find the path specified."}
+{"level":"INFO","time":"2025-03-16T22:25:49.416+0800","caller":"flag/enter.go:43","msg":"Successfully exported SQL data"}
+{"level":"INFO","time":"2025-03-16T22:27:50.531+0800","caller":"flag/enter.go:43","msg":"Successfully exported SQL data"}
+{"level":"ERROR","time":"2025-03-17T23:34:29.120+0800","caller":"flag/enter.go:70","msg":"Failed to create ES indices:","error":"an error happened during the Exists query execution: unsupported protocol scheme \"\""}
+{"level":"ERROR","time":"2025-03-17T23:38:21.023+0800","caller":"initialize/elasticsearch.go:32","msg":"Failed to connect to Elasticsearch","error":"cannot create client: cannot parse url: parse \"127.0.0.1:9200\": first path segment in URL cannot contain colon"}
+{"level":"INFO","time":"2025-03-17T23:38:44.447+0800","caller":"flag/enter.go:72","msg":"Successfully created ES indices"}
+{"level":"INFO","time":"2025-03-17T23:42:55.497+0800","caller":"flag/enter.go:72","msg":"Successfully created ES indices"}
+{"level":"ERROR","time":"2025-03-18T00:10:11.697+0800","caller":"flag/enter.go:89","msg":"Unknown command","error":"Unknown command"}
+{"level":"ERROR","time":"2025-03-18T00:10:26.750+0800","caller":"flag/enter.go:83","msg":"Failed to import ES data:","error":"status: 400, failed: [parse_exception], reason: could not parse bulk request body"}
+{"level":"INFO","time":"2025-03-18T11:28:40.500+0800","caller":"flag/enter.go:50","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-18T11:28:41.479+0800","caller":"flag/enter.go:73","msg":"Successfully created ES indices"}
+{"level":"INFO","time":"2025-03-18T11:28:47.588+0800","caller":"flag/enter.go:50","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-18T11:28:52.315+0800","caller":"flag/enter.go:73","msg":"Successfully created ES indices"}
+{"level":"ERROR","time":"2025-03-18T18:00:45.205+0800","caller":"flag/enter.go:93","msg":"Failed to create an administrator:","error":"Error 1146 (42S02): Table 'next_horizon_db.users' doesn't exist"}
+{"level":"INFO","time":"2025-03-18T18:03:02.468+0800","caller":"flag/enter.go:54","msg":"Successfully created table structure"}
+{"level":"INFO","time":"2025-03-18T18:03:27.086+0800","caller":"flag/enter.go:95","msg":"Successfully created an administrator"}
+{"level":"INFO","time":"2025-03-18T22:24:17.628+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-18T22:24:17.628+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"ERROR","time":"2025-03-21T09:46:51.605+0800","caller":"initialize/gnorm.go:18","msg":"Failed to connect to MySQL","error":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"ERROR","time":"2025-03-21T09:46:51.605+0800","caller":"initialize/redis.go:24","msg":"Failed to connect to Redis:","error":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2025-03-21T09:47:11.027+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T09:47:11.027+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:30:02.476+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:30:02.476+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:30:03.668+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:30:03.668+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:40:28.949+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:40:28.949+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:43:27.108+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:43:27.108+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:43:59.827+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:43:59.827+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:44:13.503+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:44:13.503+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:44:30.466+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:44:30.466+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:45:21.801+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:45:21.801+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T10:45:22.974+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T10:45:22.974+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:28:08.005+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:28:08.005+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:28:09.315+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:28:09.315+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:29:02.486+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:29:02.486+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:30:57.448+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:30:57.448+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:30:58.696+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:30:58.696+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:31:19.452+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:31:19.452+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:31:34.436+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:31:34.436+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-21T11:31:42.155+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-21T11:31:42.155+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
