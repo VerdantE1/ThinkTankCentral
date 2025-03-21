@@ -2,7 +2,7 @@ package flag
 
 import (
 	"ThinkTankCentral/global"
-	appTypes "ThinkTankCentral/model/addTypes"
+	appTypes "ThinkTankCentral/model/appTypes"
 	"ThinkTankCentral/model/database"
 	"ThinkTankCentral/utils"
 	"errors"

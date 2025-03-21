@@ -2,7 +2,7 @@ package database
 
 import (
 	"ThinkTankCentral/global"
-	appTypes "ThinkTankCentral/model/addTypes"
+	appTypes "ThinkTankCentral/model/appTypes"
 )
 
 // Image 图片表

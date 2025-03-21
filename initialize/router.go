@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"ThinkTankCentral/global"
+	"ThinkTankCentral/middleware"
 	"ThinkTankCentral/router"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
@@ -13,6 +14,8 @@ func InitRouter() *gin.Engine {
 	//设置gin模式
 	gin.SetMode(global.Config.System.Env)
 	Router := gin.Default()
+
+	Router.Use(middleware.GinLogger(), middleware.GinRecovery(true))
 
 	//使用gin会话路由
 	var store = cookie.NewStore([]byte(global.Config.System.SessionsSecret)) // 创建一个基于 Cookie 的会话存储（Session Store）
