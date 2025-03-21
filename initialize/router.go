@@ -42,7 +42,7 @@ func InitRouter() *gin.Engine {
 		routerGroup.InitBaseRouter(publicGroup) //将publicGroup初始化为baseGroup
 	}
 	{
-
+		routerGroup.InitUserRouter(privateGroup, publicGroup, adminGroup)
 	}
 
 	return Router

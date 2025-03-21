@@ -33,6 +33,7 @@ type UserApi struct {
 // 2. 验证邮箱验证码有效性
 // 3. 创建用户记录
 // 4. 生成JWT令牌
+// Register 注册
 func (userApi *UserApi) Register(c *gin.Context) {
 	var req request.Register
 	err := c.ShouldBindJSON(&req)
