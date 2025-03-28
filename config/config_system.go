@@ -1,7 +1,9 @@
 package config
 
 import (
+	"ThinkTankCentral/model/appTypes"
 	"fmt"
+	"strings"
 )
 
 // System 系统配置
@@ -17,4 +19,15 @@ type System struct {
 
 func (s System) Addr() string {
 	return fmt.Sprintf("%s:%d", s.Host, s.Port)
+}
+
+func (s System) Storage() appTypes.Storage {
+	switch strings.ToLower(s.OssType) {
+	case "local", "Local":
+		return appTypes.Local
+	case "qiniu", "Qiniu":
+		return appTypes.Qiniu
+	default:
+		return appTypes.Local
+	}
 }
