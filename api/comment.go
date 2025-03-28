@@ -2,6 +2,7 @@ package api
 
 import (
 	"ThinkTankCentral/global"
+	"ThinkTankCentral/model/request"
 	"ThinkTankCentral/model/response"
 	"ThinkTankCentral/utils"
 	"github.com/gin-gonic/gin"
