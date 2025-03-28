@@ -202,3 +202,6 @@
 {"level":"INFO","time":"2025-03-28T15:09:51.382+0800","caller":"initialize/cron.go:17","msg":"schedule","keysAndValues":["now","2025-03-28T15:09:51.3823462+08:00","entry",1,"next","2025-03-28T16:00:00+08:00"]}
 {"level":"INFO","time":"2025-03-28T15:10:02.928+0800","caller":"middleware/logger.go:35","msg":"/","status":404,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36","errors":"","cost":0}
 {"level":"INFO","time":"2025-03-28T15:10:03.145+0800","caller":"middleware/logger.go:35","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"initialize/cron.go:17","msg":"schedule","keysAndValues":["now","2025-03-28T16:03:10.4188582+08:00","entry",1,"next","2025-03-28T17:00:00+08:00"]}
