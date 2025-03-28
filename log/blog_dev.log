@@ -205,3 +205,9 @@
 {"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
 {"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
 {"level":"INFO","time":"2025-03-28T16:03:10.418+0800","caller":"initialize/cron.go:17","msg":"schedule","keysAndValues":["now","2025-03-28T16:03:10.4188582+08:00","entry",1,"next","2025-03-28T17:00:00+08:00"]}
+{"level":"INFO","time":"2025-03-28T16:09:28.845+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T16:09:28.845+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-28T16:09:28.845+0800","caller":"initialize/cron.go:17","msg":"schedule","keysAndValues":["now","2025-03-28T16:09:28.8456432+08:00","entry",1,"next","2025-03-28T17:00:00+08:00"]}
+{"level":"INFO","time":"2025-03-28T16:13:24.273+0800","caller":"core/server.go:26","msg":"server run success on ","address":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-03-28T16:13:24.273+0800","caller":"initialize/cron.go:17","msg":"start","keysAndValues":null}
+{"level":"INFO","time":"2025-03-28T16:13:24.274+0800","caller":"initialize/cron.go:17","msg":"schedule","keysAndValues":["now","2025-03-28T16:13:24.274187+08:00","entry",1,"next","2025-03-28T17:00:00+08:00"]}
